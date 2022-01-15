@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		#emoji{
+			font-size: 200px;
+		}
+
+
+	</style>
+	<title></title>
+</head>
+<body>
+<div id="emoji">
+	
+
+</div>
+
+<script type="text/javascript">
+	var stuff = ["🥭", "🍇", "🍉", "🍌", "🥑", "🍎", "🍒"]
+	
+
+	document.addEventListener("click",
+		function(event){
+			var random = Math.round(Math.random()*6);
+				emoji.innerText = stuff[random]
+			console.log(random)
+			console.log(event)
+
+			if (event.key == "a") {
+				emoji.innerText = stuff[0];
+			}
+
+			if (event.key == "s") {
+				emoji.innerText = stuff[1];
+			}
+
+		}
+
+		)
+
+
+</script>
+
+</body>
+</html>
