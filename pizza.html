@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+
+<script type="text/javascript">
+	
+	function makeCookie(x){
+		var slice = document.createElement("div");
+		document.body.appendChild(slice)
+		slice.style.width = "100px";
+		slice.style.height = "100px";
+		slice.style.backgroundImage = "url(cookie.png)";
+		slice.style.backgroundSize = "contain"
+		slice.style.display = "inline-block";
+		slice.innerText = x;
+
+
+		// slice.inerText=input;
+
+
+		}
+
+		for(var i = 0; i <= 10000; i=i+1){makeCookie(i)}
+
+
+
+</script>
+
+
+	
+</body>
+</html>
