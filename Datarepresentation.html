@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Data Representation - Messi Goals</title>
+	<center>
+	<h1>Data Representation - Messi Goals</h1>
+	<br>
+	</center>
+
+	<style type="text/css"> 
+	h1{
+		text-align: center;
+	}
+</style>
+
+</head>
+
+<body style = background-color:lightblue;>
+	<script>
+	var years = ["2011 - 73", "2012 - 91", "2013 - 66", "2014 - 46", "2015 - 49", "2016 - 52", "2017 - 54", "2018 - 50", "2019 - 44", "2020 - 47", "2021 - 21"]
+	var goals = ["73", "91", "66", "46", "49", "52", "54", "50", "44", "47", "21"]
+	
+	function makeSoccerball(div){
+	var soccerball = document.createElement("div")
+	div.appendChild(soccerball);
+	soccerball.style.height = "50px";
+	soccerball.style.width = "40px";
+	soccerball.style.backgroundImage = "url(Vihaan.png)";
+	soccerball.style.backgroundSize = "contain";
+soccerball.style.display = "inline-block";
+}
+
+for(const year of years){
+	const yearheader = document.createElement("h1");
+	yearheader.innerHTML = year;
+	const goal = goals[years.indexOf(year)];
+	const goaldiv = document.createElement("div");
+	goaldiv.id="goaldiv";
+	let soccerballs = 0;
+	setInterval(() => {
+		if (soccerballs < goal) {
+			makeSoccerball(goaldiv)
+			soccerballs += 1;
+		}
+	}, 100);
+	document.body.appendChild(yearheader);
+	document.body.appendChild(goaldiv);
+}
+
+</script>
+
+</body>
+</html>
