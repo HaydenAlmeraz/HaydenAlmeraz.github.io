@@ -13,7 +13,7 @@
 			background-repeat:no-repeat;
 			position:absolute;
 			top:550px;
-			left:100px;
+			left:1000px;
 			color: red
 
 		}
@@ -37,6 +37,8 @@
 		}
 		#thankyou{
 			background-image:url(thankyou.png);
+			transition: 2s;
+			opacity: 0;
 			width:400px;
 			height:400px;
 			background-repeat:no-repeat;
@@ -51,15 +53,16 @@
 </head>
 <body>
 	<div id = person></div>
-	<div id = golf>
+	<div id = golf></div>
 	<div id = thankyou>
 		
 	</div>
 <script type="text/javascript">
 	
 	person.addEventListener("click", function(){
-		person.style.backgroundImage = "url(swinginggolfclub.gif)"
-		thankyou.style.backgroundImage = "url(Thankyou.png)"
+		person.style.backgroundImage = "url(swinginggolfclub.gif)";
+		thankyou.style.backgroundImage = "url(Thankyou.png)";
+		thankyou.style.opacity = "1";
 	})
 golf.addEventListener("click", function(){
 	person.style.backgroundImage = "url(swinginggolfclub.png)"

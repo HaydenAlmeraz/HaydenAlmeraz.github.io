@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)file:///Users/student/Desktop/class%20Monday/Game.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<style type="text/css">
+	.virus{
+		width: 200px;
+		height: 200px;
+		position:absolute;
+		background-image:url(ghost.png);
+		background-size:cover;
+/*Style for the virus or ghosts*/
+	}
+#cursor{
+background-image:url(pacman.png);
+width:50px;
+height:55px;
+position: absolute;
+background-size:contain;
+background-size:cover;
+cursor: none;
+
+/*Styling for my cursor to make it look like pac man*/
+}
+
+</style>
+
+	<title></title>
+</head>
+<body>
+	<div id = "cursor">
+		
+	</div>
+<script type="text/javascript">
+
+document.addEventListener("mousemove", function(event) {
+	console.log(event)
+	cursor.style.left = event.clientX -25 + "px"
+	cursor.style.top = event.clientY -27.5 + "px"
+})
+
+	//these two things are pointing to html elements in the body//
+	// var pew = document.getElementById('sound');
+	// var input = document.getElementById('input');
+
+	//this is the counter variable that will keep score//
+
+	var x = 0;
+
+
+	function createCorona(){
+		var corona = document.createElement('div');
+		document.body.appendChild(corona);
+		corona.classList.add("virus");
+// Creating the function create corona and adding virus
+
+	function changePosition(){
+		corona.style.left = 1000 * Math.random()+"px";
+		corona.style.top = 1000 * Math.random()+"px"; };
+// The virus's or ghosts are being moved around randomly
+
+
+	corona.addEventListener("click", function() {
+		console.log("hi");
+		x = x + 1;
+		// input.value = x;
+		corona.classList.remove("virus");
+		pew.play()
+
+}) //this is the end of the event listener and the funciton inside the event listener//
+
+	setInterval(changePosition, 2000)
+// Every 2 seconds
+
+	};
+
+
+	setInterval(createCorona, 1000);
+// Every 1 second
+</script>
